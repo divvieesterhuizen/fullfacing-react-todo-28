@@ -13,6 +13,7 @@ const EditTodo = ({ todo, updateTodo, showAlert, setShowEditBox }) => {
     } else {
       const updatedTodo = { id, title: text, completed };
       updateTodo(updatedTodo);
+      setShowEditBox(false);
       setText('');
     }
   };
@@ -35,7 +36,7 @@ const EditTodo = ({ todo, updateTodo, showAlert, setShowEditBox }) => {
             onClick={() => {
               setShowEditBox(false);
             }}
-            className='btn-gray'
+            className='btn-gray mx-1'
           >
             Cancel Update
           </button>
