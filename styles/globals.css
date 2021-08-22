@@ -58,6 +58,10 @@ button {
   /* flex-direction: column; */
 }
 
+.flex-justify {
+  justify-content: space-between;
+}
+
 .px-1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -69,4 +73,12 @@ button {
 
 .border-rounded {
   border-radius: 10px;
+}
+
+.red {
+  color: #dc3545;
+}
+
+.green {
+  color: green;
 }

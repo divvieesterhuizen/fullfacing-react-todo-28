@@ -1,0 +1,14 @@
+.todoText {
+  margin-left: 1rem;
+  flex: 3;
+}
+
+.todoIcon {
+  margin-left: 1rem;
+}
+
+.todoIcon:hover {
+  cursor: pointer;
+  filter: grayscale(100);
+  transform: rotate(10deg);
+}
