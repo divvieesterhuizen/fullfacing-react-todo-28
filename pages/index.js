@@ -10,6 +10,11 @@ export default function Home() {
         <meta name='description' content='Todo assesment' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <div className='bg-primary py-1'>
+        <div className='container'>
+          <h1 className='white'>Todo App</h1>
+        </div>
+      </div>
       <div className='container'>
         <TodoList />
       </div>

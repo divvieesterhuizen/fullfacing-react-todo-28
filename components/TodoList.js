@@ -12,7 +12,6 @@ const TodoList = () => {
   // Functions
   const addTodo = (text) => {
     const newTodo = { id: nanoid(), title: text, completed: false };
-    console.log(newTodo);
     setTodos([...todos, newTodo]);
   };
 
@@ -20,12 +19,30 @@ const TodoList = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const checkTodo = (id) => {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed;
+          return todo;
+        } else {
+          return todo;
+        }
+      })
+    );
+  };
+
   return (
     <>
       <AddTodo addTodo={addTodo} />
       {todos.length > 0 ? (
         todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} deleteTodo={deleteTodo} />
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            deleteTodo={deleteTodo}
+            checkTodo={checkTodo}
+          />
         ))
       ) : (
         <h4>No Todos to show. Maybe add one using the form above.</h4>

@@ -42,9 +42,14 @@ input[type='text'] {
 }
 
 button {
-  background-color: #dc3545;
+  background-color: #ccc;
   border: none;
   cursor: pointer;
+}
+
+.btn-primary,
+.bg-primary {
+  background-color: #dc3545;
 }
 
 .container {
@@ -63,16 +68,29 @@ button {
 }
 
 .px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.px-2 {
+.py-2 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 .border-rounded {
   border-radius: 10px;
+}
+
+.white {
+  color: #fff;
 }
 
 .red {

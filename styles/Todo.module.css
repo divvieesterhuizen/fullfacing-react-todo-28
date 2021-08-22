@@ -12,3 +12,7 @@
   filter: grayscale(100);
   transform: rotate(10deg);
 }
+
+.text-strike {
+  text-decoration: line-through;
+}

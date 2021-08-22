@@ -12,7 +12,7 @@ const AddTodo = ({ addTodo }) => {
 
   return (
     <div>
-      <form onSubmit={onSubmit} className='px-2'>
+      <form onSubmit={onSubmit} className='py-2'>
         <div>
           <input
             type='text'
@@ -23,7 +23,7 @@ const AddTodo = ({ addTodo }) => {
               setText(e.target.value);
             }}
           />
-          <button>Add Todo</button>
+          <button className='btn-primary'>Add Todo</button>
         </div>
       </form>
     </div>

@@ -3,7 +3,7 @@ import { FaPencilAlt } from 'react-icons/fa';
 
 import styles from '../styles/Todo.module.css';
 
-const TodoItem = ({ todo, deleteTodo }) => {
+const TodoItem = ({ todo, deleteTodo, checkTodo }) => {
   const { id, title, completed } = todo;
 
   const handleKeyPress = (e) => {
@@ -17,12 +17,14 @@ const TodoItem = ({ todo, deleteTodo }) => {
       <input
         type='checkbox'
         onChange={() => {
-          console.log('checked: ', title);
+          checkTodo(id);
         }}
         checked={!!completed}
         onKeyPress={handleKeyPress}
       />
-      <h4 className={styles.todoText}>{title}</h4>
+      <h4 className={`${styles.todoText} completed ? 'text-strike' : ''`}>
+        {title}
+      </h4>
       <FaTrash
         onClick={() => {
           deleteTodo(id);
