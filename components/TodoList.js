@@ -58,7 +58,12 @@ const TodoList = () => {
     <>
       {alertMsg.length > 0 && <Alert msg={alertMsg} />}
 
-      <AddTodo addTodo={addTodo} />
+      <AddTodo addTodo={addTodo} showAlert={showAlert} />
+
+      <h3 className='py-1'>
+        Total Todos: {todos.length > 0 ? todos.length : 0}
+      </h3>
+
       {todos.length > 0 ? (
         todos.map((todo) => (
           <TodoItem
@@ -68,10 +73,11 @@ const TodoList = () => {
             checkTodo={checkTodo}
             updateTodo={updateTodo}
             showAlert={showAlert}
+            updateTodo={updateTodo}
           />
         ))
       ) : (
-        <h4>No Todos to show. Maybe add one using the form above.</h4>
+        <h3>No Todos to show. Maybe add one using the form above.</h3>
       )}
     </>
   );

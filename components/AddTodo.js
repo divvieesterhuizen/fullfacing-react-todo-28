@@ -1,13 +1,17 @@
 import { useState } from 'react';
 
-const AddTodo = ({ addTodo }) => {
+const AddTodo = ({ addTodo, showAlert }) => {
   const [text, setText] = useState('');
-  const [todoAdded, setTodoAdded] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    addTodo(text);
-    setText('');
+
+    if (text === '') {
+      showAlert('Input empty. Please add some text.');
+    } else {
+      addTodo(text);
+      setText('');
+    }
   };
 
   return (

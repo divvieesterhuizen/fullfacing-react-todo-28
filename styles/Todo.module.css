@@ -13,6 +13,6 @@
   transform: rotate(10deg);
 }
 
-.text-strike {
+.textStrike {
   text-decoration: line-through;
 }
