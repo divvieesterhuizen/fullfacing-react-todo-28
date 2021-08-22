@@ -52,6 +52,11 @@ button {
   background-color: #dc3545;
 }
 
+.btn-gray,
+.bg-gray {
+  background-color: #ccc;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -85,8 +90,15 @@ button {
   padding-bottom: 2rem;
 }
 
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+
 .border-rounded {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .white {

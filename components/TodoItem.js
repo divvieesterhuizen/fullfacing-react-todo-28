@@ -3,8 +3,12 @@ import { FaPencilAlt } from 'react-icons/fa';
 
 import styles from '../styles/Todo.module.css';
 
-const TodoItem = ({ todo, deleteTodo, checkTodo }) => {
+const TodoItem = ({ todo, deleteTodo, checkTodo, updateTodo }) => {
   const { id, title, completed } = todo;
+
+  const onEditClick = () => {
+    // updateTodo()
+  };
 
   const handleKeyPress = (e) => {
     if (e.key === 'd' || e.key === 'D') {
