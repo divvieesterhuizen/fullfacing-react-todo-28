@@ -110,21 +110,23 @@ const TodoList = () => {
         Total Todos: {todos.length > 0 ? todos.length : 0}
       </h3>
 
-      {todos.length > 0 ? (
-        todos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            deleteTodo={deleteTodo}
-            checkTodo={checkTodo}
-            updateTodo={updateTodo}
-            showAlert={showAlert}
-            updateTodo={updateTodo}
-          />
-        ))
-      ) : (
-        <h3>No Todos to show. Maybe add one using the form above.</h3>
-      )}
+      <div className='py-1'>
+        {todos.length > 0 ? (
+          todos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              deleteTodo={deleteTodo}
+              checkTodo={checkTodo}
+              updateTodo={updateTodo}
+              showAlert={showAlert}
+              updateTodo={updateTodo}
+            />
+          ))
+        ) : (
+          <h3>No Todos to show. Maybe add one using the form above.</h3>
+        )}
+      </div>
     </>
   );
 };
