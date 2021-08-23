@@ -120,7 +120,6 @@ const TodoList = () => {
               checkTodo={checkTodo}
               updateTodo={updateTodo}
               showAlert={showAlert}
-              updateTodo={updateTodo}
             />
           ))
         ) : (
